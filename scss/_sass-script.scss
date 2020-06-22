@@ -1,0 +1,88 @@
+/* SASS SCRIPT */
+
+/* Responsive Grid */
+$gridcolumns: 12;
+$gridgutter: 24px;
+
+$breakpoints: (
+    sm: 600px,
+    md: 900px,
+    lg: 1200px,
+);
+
+@mixin breakpoint($size) {  
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+/* Colors */
+$darkgray: #343434;
+$golden: #a67e5c;
+$beige: #f7eace;
+$white: #ffffff;
+
+/* Fonts */
+$gotham: 'Gotham', Helvetica, Arial, sans-serif;
+$baskerville: 'Libre Baskerville', 'Times New Roman', Times, serif;
+
+@mixin uppercase($spacing: 1px) {
+    text-transform: uppercase;
+    letter-spacing: $spacing;
+}
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+  
+@mixin font-size-rem($size) {
+    font-size: $size; //Fallback for unsupported browsers
+    font-size: calculateRem($size);
+}
+
+@mixin font-size-rps($size, $increment) {
+    font-size: $size;
+  
+    @each $key, $value in $breakpoints {
+        @include breakpoint($key) {
+            font-size: $size + $increment * index(($breakpoints), ($key $value));
+        }
+    }
+}
+
+/* Animations */
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: $what $time $how;
+    -moz-transition:    $what $time $how;
+    -ms-transition:     $what $time $how;
+    -o-transition:      $what $time $how;
+    transition:         $what $time $how;
+}
+
+/* Others */
+%clearfix {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+%position-absolute-full{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+%flex-vertical-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+%flex-horizontal-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

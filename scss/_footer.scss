@@ -1,0 +1,148 @@
+/* FOOTER */
+
+.page-footer {
+    color: $white;
+
+    a {
+        color: $white;
+    }
+
+    .gridrowfull:first-child {
+        background-color: $golden;
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        a {
+            opacity: 0.6;
+            @include transition();
+
+            &:hover {
+                opacity: 1; 
+            }
+        }
+
+        .gridrow {
+            text-align: center;
+
+            @include breakpoint(sm) {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__logo {
+        
+        img {
+            height: 70px;
+        }
+
+        @include breakpoint(sm) {
+            text-align: left;
+
+            img {
+                height: 80px;
+            }   
+        }
+
+        @include breakpoint(md) {
+            flex: 1;
+        }
+    }
+
+    &__links {
+        text-align: center;
+        margin-top: 16px;
+        margin-bottom: 24px;
+
+        @include breakpoint(sm) {
+            margin: 0;
+        }
+
+        @include breakpoint(md) {
+            flex: 2;
+        }
+        
+        a {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 10px;
+            border-bottom: 0 solid $golden;
+            @include transition();
+
+            @include breakpoint(sm) {
+                font-size: 18px;
+                line-height: 2;
+                margin: 15px;
+            }
+
+            @include breakpoint(md) {
+                line-height: initial;
+            }
+
+            &:hover {
+                border-bottom: 2px solid $white;
+                padding-bottom: 4px;
+            }
+        }
+    }
+
+    &__social-icons {
+
+        @include breakpoint(sm) {
+            text-align: right;
+        }
+
+        @include breakpoint(md) {
+            flex: 1;
+        }
+
+        img {
+            height: 26px;
+            margin: 0 7.5px;
+        }
+    }
+
+    .gridrowfull:last-child {
+        background-color: $darkgray;
+        padding: 24px 0;
+        font-size: 11px;
+        text-align: center;
+
+        @include breakpoint(sm) {
+            font-size: 12px;
+        }
+    }
+
+    &__copyright {
+        margin: 0;
+        margin-bottom: 6px;
+        
+        @include breakpoint(md) {
+            text-align: left;
+            margin-bottom: 0;
+        }
+    }
+
+    &__policies {
+
+        @include breakpoint(md) {
+            text-align: right;
+        }
+
+        a {
+            border-bottom: 1px solid $white;
+            padding-bottom: 2px;
+            @include transition();
+
+            &:hover {
+                padding-bottom: 5px;
+                border-color: $golden;
+            }
+        }
+
+        a:first-child{
+            margin-right: 15px;
+        }
+    }
+}

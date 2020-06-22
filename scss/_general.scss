@@ -1,0 +1,124 @@
+/* GENERAL STYLES */
+
+/* Text */
+html {
+  font-family: $gotham;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5;
+  color: $darkgray;
+  scroll-behavior:smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+  
+a {
+  text-decoration: none;
+  color: $darkgray;
+}
+
+p a {
+  color: $golden;
+  border-bottom: 1px solid $golden;
+  padding-bottom: 2px;
+  font-weight: 500;
+  @include transition();
+
+  &:hover {
+    border-color: $darkgray;
+    padding-bottom: 5px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  @include font-size-rps(15px, 1);
+  font-weight: 400;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+svg[title="+"] {
+  vertical-align: middle;
+  padding-bottom: 6px;
+  margin-left: -2px;
+}
+
+.section-title {
+  font-family: $baskerville;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.4;
+  color: $golden;
+  text-align: center;
+
+  @include breakpoint(sm) {
+    font-size: 40px;
+    margin-top: 60px;
+  }
+
+  @include breakpoint(md) {
+    text-align: left;
+  }
+
+  @include breakpoint(lg) {
+    font-size: 52px;
+  }
+}
+
+.section-subtitle {
+  @include uppercase();
+  @include font-size-rps(13px, 1);
+  color: $golden;
+}
+
+/* Buttons */
+.button {
+  @include font-size-rps(16px, 2);
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  color: $golden;
+  border: 2px solid $golden;
+  line-height: 48px;
+  text-align: center;
+  @include transition(all, 0.2s);
+
+  &:hover {
+    background-color: $golden;
+    color: $white;
+  }
+
+  @include breakpoint(md) {
+    line-height: 60px;
+  }
+}
+
+/* Bullets */
+.slide-bullet {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  background-color: rgba(255,255,255,0.25);
+  border-radius: 50%;
+  margin-left: 12px;
+  margin-right: 12px;
+  cursor: pointer;
+  @include transition(all, 0.4s);
+}
+
+.slide-bullet:hover {
+  background-color: $golden;
+}
+
+.slide-bullet.active-slide {
+  background-color: $golden;
+  transform: scale(1.5);
+}

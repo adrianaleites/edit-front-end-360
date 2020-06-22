@@ -1,0 +1,66 @@
+/* GRID */
+
+.gridrowfull {
+    width: 100%;
+}
+
+.gridrow {
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint(sm) {
+        width: map-get($breakpoints, sm);
+    }
+
+    @include breakpoint(md) {
+        width: map-get($breakpoints, md);
+    }
+
+    @include breakpoint(lg) {
+        width: map-get($breakpoints, lg);
+    } 
+}
+ 
+.gridrowfull, .gridrow {
+    @extend %clearfix;
+
+    &.nogutter {
+        @for $i from 1 through $gridcolumns {
+            .col-#{$i} {
+                padding: 0;
+            }
+        }
+    }
+
+    @for $i from 1 through $gridcolumns {
+        .col-#{$i} {
+            box-sizing: border-box;
+            width: percentage($i/$gridcolumns);
+            float: left;
+            padding-left: $gridgutter / 2;
+            padding-right: $gridgutter / 2;
+        }
+        .offset-#{$i} {
+            box-sizing: border-box;
+            margin-left: percentage($i/$gridcolumns);
+        }
+    }
+    
+    @each $key, $value in $breakpoints {
+        @for $i from 1 through $gridcolumns {
+            @include breakpoint($key) {
+                .col-#{$key}-#{$i} {
+                    width: percentage($i/$gridcolumns);
+                }
+            }
+        }
+
+        @for $i from 0 through $gridcolumns {
+            @include breakpoint($key) {
+                .offset-#{$key}-#{$i} {
+                    margin-left: percentage($i/$gridcolumns);
+                }
+            }
+        }
+    }
+}

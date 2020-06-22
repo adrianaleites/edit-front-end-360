@@ -1,0 +1,19 @@
+{
+  "name": "landing_page_360",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "sass ./scss/main.scss ./css/styles.css",
+    "watch": "sass --watch ./scss/main.scss ./css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

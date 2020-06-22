@@ -1,0 +1,220 @@
+/* HEADER */
+
+.page-header {
+    width: 100%;
+    height:100vh;
+    position:relative;
+    overflow: hidden;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__nav {
+        position: absolute;
+        top: 0;
+        padding-top: 30px;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        .flex-item {
+            text-align: center;
+
+            &:first-child {
+                text-align: left;
+                flex: 1;
+            }
+
+            &:last-child {
+                text-align: right;
+            }
+
+            @include breakpoint(sm) {
+                &:first-child {
+                    flex: 2.5;
+                }
+                &:last-child {
+                    flex: 2;
+                }
+            }
+
+            @include breakpoint(md) {
+                &:first-child {
+                    flex: 1;
+                }
+                &:last-child {
+                    flex: 1;
+                }
+            }
+        }
+
+        &-card-name {
+            margin-left: $gridgutter / 2;
+            color: $white;
+            font-size: 12px;
+            @include uppercase();
+
+            svg {
+                fill: $white;
+                height: 24px;
+            }
+
+            @include breakpoint(lg) {
+                font-size: 14px;
+            }
+        }
+
+        &-logo {
+            display: none;
+            
+            @include breakpoint(sm) {
+                display: initial;
+
+                img {
+                    height: 55px;
+                }
+            }
+
+            @include breakpoint(md) {
+                img {
+                    height: 75px;
+                }
+            }
+        }
+
+        &-link {
+            span {
+                display: none;
+
+                @include breakpoint(sm) {
+                    display: initial;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: $white;
+                    border-bottom: 1px solid $white;
+                    padding-bottom: 3px;
+                    @include transition();
+
+                    &:hover {
+                        color: $golden;
+                        padding-bottom: 6px;
+                    }
+                }
+
+                @include breakpoint(md) {
+                    font-size: 16px;
+                }
+            }
+
+            img {
+                height: 24px;
+                margin-bottom: -6px;
+                margin-left: 5px;
+                margin-right: $gridgutter / 2;
+            }
+        }
+    }
+
+    &__content {
+        margin-top: -36px;
+
+        @include breakpoint(lg) {
+            margin-top: 0;
+        }
+
+        h2 {
+            @include font-size-rps(34px, 8);
+            line-height: 1.2;
+            margin-bottom: 12px;
+
+            span {
+                display: block;
+            }
+
+            @include breakpoint(lg) {
+                margin-bottom: 24px;
+            }
+        }
+
+        q {
+            @include font-size-rps(16px, 2);
+            display: block;
+            font-family: $baskerville;
+            font-style: italic;
+            color: $beige;
+            margin-bottom: 36px;
+
+            @include breakpoint(lg) {
+                margin-bottom: 48px;
+            }
+        }
+
+        .button {
+            color: $white;
+        }
+    }
+
+    &__slide-nav {
+        text-align: center;
+        position: absolute;
+        bottom: 48px;
+    }
+
+    &__slide-label {
+        font-size: 14px;
+        font-family: $baskerville;
+        font-weight: 700;
+        @include uppercase(1.5px);
+        color: $beige;
+
+        @include breakpoint(md) {
+            font-size: 16px;
+        }
+    }
+
+    &__bg-video {
+        min-width: 100%;
+        min-height: 100%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &-container {
+            @extend %position-absolute-full;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &-overlay {
+            @extend %position-absolute-full;
+            background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+            z-index: 1;
+        }
+
+        &-progress-bar {
+            display: none;
+
+            @include breakpoint(sm) {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 6px;
+                background-color: rgba(255,255,255,0.25);
+                z-index: 1;
+
+                span {
+                    display: block;
+                    width: 0;
+                    height: inherit;
+                    background-color: $golden;
+                    @include transition();
+                }
+            }
+        }
+    }
+}

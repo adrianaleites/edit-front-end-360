@@ -1,6 +1,6 @@
 ###### EDIT. Disruptive Digital Education · Front-end Development Course · 2019 
 ---
-# Digital Project 360º <br> Landing Page for Marques Soares + 
+# Digital Project 360º <br> [Landing Page](https://adrianaleites.github.io/edit-front-end-360/) for Marques Soares + 
 
 ## Digital Project 360º
 
@@ -55,8 +55,8 @@ With an attitude of mutual help, in addition to fulfilling my role as front-end 
 - JavaScript 
 
 ### Libraries and other external stuff
-- [Normalize.css](https://github.com/necolas/normalize.css/) (_for a more consistent starting point across browsers_)
-- [Sass](https://sass-lang.com/documentation) (_compiles into CSS_)
+- [Normalize.css](https://github.com/necolas/normalize.css/) (_For a more consistent starting point across browsers_)
+- [Sass](https://sass-lang.com/documentation) (_Compiles into CSS_)
 - [Google Fonts](https://fonts.google.com/specimen/Libre+Baskerville#standard-styles) (_Libre Baskerville_)
 - [jQuery](https://jquery.com/) (_JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax_)
 

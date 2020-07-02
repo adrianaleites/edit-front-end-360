@@ -55,9 +55,9 @@ With an attitude of mutual help, in addition to fulfilling my role as front-end 
 - JavaScript 
 
 ### Libraries and other external stuff
-- [Normalize.css](https://github.com/necolas/normalize.css/) (_For a more consistent starting point across browsers_)
-- [Sass](https://sass-lang.com/documentation) (_Compiles into CSS_)
-- [Google Fonts](https://fonts.google.com/specimen/Libre+Baskerville#standard-styles) (_Libre Baskerville_)
-- [jQuery](https://jquery.com/) (_JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax_)
+- [Normalize.css](https://github.com/necolas/normalize.css/) _(For a more consistent starting point across browsers)_
+- [Sass](https://sass-lang.com/) _(Compiles into CSS)_
+- [Google Fonts](https://fonts.google.com/specimen/Libre+Baskerville#standard-styles) _(Libre Baskerville)_
+- [jQuery](https://jquery.com/) _(JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax)_
 
 ---

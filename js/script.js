@@ -66,7 +66,6 @@ personasBullets.click(function() {
 
 /* HEADER VIDEO TIMELINE */
 
-
 const videoTimeBar = jQuery('.page-header__bg-video-progress-bar span');
 
 const updateVideoTimeline = video.addEventListener('timeupdate', function() {
@@ -84,7 +83,6 @@ const updateVideoTimeline = video.addEventListener('timeupdate', function() {
 
 });
 
-
 /* HEADER BUTTON */
 
 const headerButton = jQuery('.page-header__content a.button');
@@ -100,6 +98,5 @@ headerButton.mouseenter(function() {
 		jQuery(this).text('Fazer parte desta história');
 	}).fadeIn(200);
 });
-
 
 });
